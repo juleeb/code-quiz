@@ -1,0 +1,85 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: lightblue;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+}
+button {
+    background-color: lightskyblue;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+button:hover {
+    border-color: darkblue;
+}
+.start-btn {
+    font-size: 50px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.start-quiz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hide {
+    display: none;
+}
+#submitbt {
+    text-align: center;
+}
+#end-quiz {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+}
+#initial {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#time {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    
+}
+#question {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+#scores {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+#answer-buttons {
+    text-align: center;
+}
+#initial {
+    height: 33px;
+    width: 200px;
+}
