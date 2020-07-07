@@ -162,14 +162,14 @@ function setFinalScore() {
     submit.addEventListener("click", function() {
         highscores.push(inputEl.value + " - " + score);
         localStorage.setItem("highscores", JSON.stringify(highscores));
-    })
-}
+    });
+};
 
 highscores.forEach(a=>{
     var hs = document.createElement("li");
     hs.textContent = a
     highscoreDiv.appendChild(hs)
-})
+});
 
 showscores.addEventListener("mouseenter", function(){
     highscoreDiv.classList.remove("hide");
