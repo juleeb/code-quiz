@@ -1,3 +1,4 @@
+// create global variables needed
 var startButton = document.getElementById("start-btn");
 var questionContainer = document.getElementById("question-container");
 var questionEl = document.getElementById("question");
@@ -17,6 +18,7 @@ var startpage = document.querySelector(".start-quiz");
 var restartButton = document.getElementById("restart")
 var resetEl = document.querySelector("#reset");
 
+// questions for the quiz in object array
 var questions = [
     {
       question: 'Commonly used data types DO NOT include:',
@@ -50,6 +52,7 @@ var questionNum = questions.length;
 resetEl.classList.add("hide");
 startButton.addEventListener("click", startGame)
 
+// function to start game
 function startGame() {
     console.log("start");
     startButton.classList.add("hide");
@@ -61,6 +64,7 @@ function startGame() {
     timer();
 };
 
+// function to generate question and create answer buttons in javascript
 function generatequestion(i) {
     clikcedanswerbutton = "false";
     questionContainer.setAttribute("index", i);
@@ -81,6 +85,7 @@ function generatequestion(i) {
     }
 };
 
+// event listener to select answer button and decide if it is correct or wrong with condition
 answerButtonEl.addEventListener("click", function(event) {
     var currentIndex = questionContainer.getAttribute("index");
     var selected = event.target.innerText;
@@ -119,6 +124,7 @@ answerButtonEl.addEventListener("click", function(event) {
     }
 });
 
+// timer for the quiz
 function timer() {
     timerInterval = setInterval(function() {
         time--;
@@ -136,6 +142,7 @@ function timer() {
     }, 1000);
 }
 
+// function to end quiz
 function endQuiz() {
     clearInterval(timerInterval)
     questionContainer.classList.add("hide");
@@ -146,6 +153,7 @@ function endQuiz() {
     setFinalScore();
   };
 
+// function to show final score and add initials with local storage
 function setFinalScore() {
     questionContainer.classList.add("hide");
     finalscoreEl.classList.remove("hide");
