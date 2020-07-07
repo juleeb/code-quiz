@@ -13,7 +13,9 @@ var finalscoreEl = document.querySelector("#end-quiz");
 var highscores = localStorage.getItem("highscores") ? JSON.parse(localStorage.getItem("highscores")) : []
 var showscores = document.getElementById("showHS");
 var restartBtn = document.getElementById("restart-btn");
-var startpage = document.querySelector(".start-quiz")
+var startpage = document.querySelector(".start-quiz");
+var restartButton = document.getElementById("restart")
+var resetEl = document.querySelector("#reset");
 
 var questions = [
     {
@@ -45,6 +47,7 @@ var questions = [
 
 var questionNum = questions.length;
 
+resetEl.classList.add("hide");
 startButton.addEventListener("click", startGame)
 
 function startGame() {
@@ -136,6 +139,10 @@ function timer() {
 function endQuiz() {
     clearInterval(timerInterval)
     questionContainer.classList.add("hide");
+    resetEl.classList.remove("hide");
+    restartButton.addEventListener("click", function(e) {
+    location.reload();
+    }, false);
     setFinalScore();
   };
 
